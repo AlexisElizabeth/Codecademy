@@ -1,0 +1,37 @@
+weight = 41.50
+
+#Ground Shipping 
+if weight <= 2.0:
+  cost_ground_shipping = 1.50
+elif weight > 2.0 and weight <= 6:
+  cost_ground_shipping = 3.00
+elif weight >6 and weight <= 10:
+  cost_ground_shipping = 4.00
+else:
+  cost_ground_shipping = 4.75
+
+cost_ground_shipping = weight * cost_ground_shipping + 20
+print("The cost of ground shipping is", cost_ground_shipping)
+
+#Premium Ground Shipping 
+cost_premium_ground_shipping = 125.00
+print("The cost of premium ground shipping is", cost_premium_ground_shipping)
+
+#Drone Shipping 
+if weight <= 2.0:
+  cost_drone_shipping = 4.50
+elif weight > 2.0 and weight <= 6:
+  cost_drone_shipping = 9.00
+elif weight >6 and weight <= 10:
+  cost_drone_shipping = 12.00
+else:
+  cost_drone_shipping = 14.25
+
+cost_drone_shipping = weight * cost_drone_shipping
+print(cost_drone_shipping)
+
+print("The cost of drone shipping is", cost_drone_shipping)
+
+
+
+
