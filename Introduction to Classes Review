@@ -1,0 +1,51 @@
+class Student:
+  def __init__(self, name, year):
+    self.name = name
+    self.year = year
+    self.grades = []
+  def __repr__(self):
+    return self.name
+  def add_grade(self, grade):
+    if type(grade) is Grade:
+      self.grades.append(grade.score)
+  def get_average(self):
+    return sum(self.grades) / len(self.grades)
+
+class Grade:
+  minimum_passing = 65
+  def __init__(self, score):
+    self.score = score
+  def __repr__(self):
+    self.score  
+  
+  def is_passing(self):
+    if self.score >= self.minimum_passing:
+      print("You pass!")
+    else:
+      print("You fail!")
+
+roger = Student("Roger van der Weyden", 10)
+sandro = Student("Sandro Botticelli", 12)
+pieter = Student("Pieter Bruegel the Elder", 8)
+
+roger.attendance = {"Monday": True, "Tuesday": False, "Wednesday": True}
+
+
+pieter.add_grade(Grade(100))
+pieter.add_grade(Grade(0))
+pieter.add_grade(Grade(50))
+
+saved_grade = Grade(89)
+saved_grade.is_passing()
+
+print(saved_grade.score)
+
+print(pieter.get_average())
+
+print(roger.attendance)
+
+
+
+
+
+    
